@@ -1,6 +1,7 @@
 const express = require("express");
 require("dotenv").config();
 const bodyParser = require("body-parser");
+const cors = require("cors");
 const { body } = require("express-validator");
 
 const { post_send_email } = require("./controllers/email");
@@ -8,6 +9,7 @@ const app = express();
 
 // Middlewares
 app.use(bodyParser.json());
+app.use(cors());
 
 app.post(
   "/",
