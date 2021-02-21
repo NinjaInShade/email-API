@@ -18,7 +18,7 @@ function post_send_email(req, res, next) {
   const data = {
     from: email,
     to: "leonmichalak6@gmail.com",
-    subject: name,
+    subject: `From ${name},`,
     text: message,
   };
 
